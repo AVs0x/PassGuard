@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassGuard - Secure Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+h1:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #18a0fb;
+    border-radius: 50%;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #18a0fb;
+    border-radius: 50%;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+}
+</style>
+<body>
+    <div class="container">
+        <h1>PassGuard</h1>
+        <form id="login-form">
+            <label for="master-password">Master Password:  Guest</label>
+            <input type="password" id="master-password" required>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;">Incorrect Password. Please try again.</p>
+    </div>
+
+    <script src="login.js"></script>
+    
+</body>
+
+</html>
